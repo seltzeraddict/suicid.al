@@ -1,0 +1,568 @@
+body {
+    background: var(--primary-background-color);
+    color:	 #000000;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+    font-size: 62.5%;
+    text-rendering: optimizeSpeed;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    margin: 0;
+}
+
+html {
+    overflow: hidden;
+}
+
+:root {
+    --primary-background-color: #363732;
+
+    --primary-h1-color: #dce1e9;
+    --primary-h2-color: #dce1e9;
+    --primary-p-color: #dce1e9;
+    --discord-p-color: #dce1e9;
+    --primary-a-color: #dce1e9;
+    --primary-a-hover-color: #d07ee0;
+    --credits_footer-p-color: #dce1e9;
+    --credits_footer-a-color: #dce1e9;
+    --credits_footer-a-hover-color: #dce1e9;
+
+    --top-left-box: #999AC6;
+    --top-right-box: #798071;
+    --bottom-right-box: #D2D5DD;
+    --bottom-left-box: #B8BACF;
+  
+}
+
+:root.darkmode {
+    --primary-background-color: #37373bf3;
+    /* --primary-background-color: #2e2e30; */
+
+    --primary-h1-color: #9797b9;
+    --primary-h2-color: #a1a2a8b4; 
+    --primary-p-color: #9393b3;
+    --primary-a-color: #a1a2a8d7;
+    --primary-a-hover-color: #e856ff80;
+    --credits_footer-p-color: #2e2e30;
+    --credits_footer-a-color: #414146;
+    --credits_footer-a-hover-color: #e856ff8f;
+
+    --top-left-box: #666693;
+    --top-right-box: #455245;
+    --bottom-right-box: #6d7492;
+    --bottom-left-box: #76778A;
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.boxes_wrapper {
+    width: 40vw;
+    height: 50vh;
+    text-align: center;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 92%;
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 1.5rem 1.5rem; 
+    grid-template-areas: 
+      "top_left top_left top_right"
+      "bottom_left bottom_right bottom_right";
+
+}
+
+
+
+
+.box {
+    border-radius: 7px;
+    padding: .5rem;
+
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    justify-content: space-between; /* push first child to the top and the last one to the bottom */
+    height: 100%; /* make sure the container covers the full height available to it */
+
+    transition: opacity 250ms ease-in;
+    transition: filter 250ms ease-in-out;
+
+    filter: blur(.4px);
+}
+
+.box:hover {
+    filter: brightness(1.05);
+}
+
+
+/* GRID TIME  */
+
+.top_left { grid-area: top_left; }
+.top_right { grid-area: top_right; }
+.bottom_right { grid-area: bottom_right; }
+.bottom_left { grid-area: bottom_left; }
+
+/* /GRID TIME */
+
+.top_left {
+    background-color: var(--top-left-box);
+    text-align: left;
+
+    z-index: 125;
+}
+
+.top_right {
+    background-color: var(--top-right-box);
+    opacity: 0.95;
+    filter: brightness(1.2);
+
+    z-index: 135;
+}
+
+.bottom_right {
+    background-color: var(--bottom-right-box);
+    text-align: end;
+
+    z-index: 125;
+}
+
+.bottom_left {
+    background-color: var(--bottom-left-box);
+    opacity: 0.95;
+    filter: brightness(1.1);
+
+    position: relative; /* This will make sure the child pixel divs position according to this div */
+    overflow: hidden;   /* Optional: to make sure pixels do not overflow outside the div */
+
+    z-index: 135;
+}
+
+h1 {
+    font-size: calc(1rem + .7vw);
+    color: var(--primary-h1-color);
+    padding: 1rem;
+    text-align: start;
+}
+
+h2 {
+    font-size: calc(0.8rem + .6vw);
+    color: var(--primary-h2-color);
+    padding: 1rem;
+
+    filter: blur(0.3px);
+
+}
+
+p {
+    font-size: calc(0.7rem + .4vw);
+    color: var(--primary-p-color);
+    padding: 1rem;
+    position: relative;
+}
+
+p.discord {
+    font-size: calc(0.7rem + .4vw);
+    color: var(--discord-p-color);
+    padding: 1rem;
+    position: relative;
+}
+
+a {
+    font-size: calc(0.6rem + .4vw);
+    color: var(--primary-a-color);
+    padding: .5rem;
+    position: relative;
+}
+
+a:hover {
+    font-size: calc(0.6rem + .4vw);
+    color: var(--primary-a-hover-color);
+    opacity: 95%;
+    padding: .5rem;
+    transition: 250ms ease-out;
+}
+
+
+a.kyle {
+    font-size: calc(0.7rem + .4vw);
+    color: var(--primary-a-color);
+    padding: 0rem;
+
+    position: relative;
+    z-index: 54;
+    transition: color 0.3s ease-in, opacity 0.3s ease-in;
+    text-decoration: none;
+}
+
+a.kyle::before {
+    content: attr(data-text);
+    position: fixed;
+    z-index: 55;
+    background-image: linear-gradient(100deg, red, orange, yellow, green, blue, indigo, violet);
+    color: transparent; 
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    pointer-events: none;
+}
+
+a.kyle:hover::before {
+    opacity: 0.9;
+    filter: blur(1px);
+    transition: all 0.2s;
+  
+}
+
+a.kyle:hover {
+    color: transparent;
+}
+
+
+.seltzeraddict {
+    font-size: calc(0.7rem + .4vw);
+    color: var(--primary-a-color);
+    padding: 0rem;
+
+    position: relative;
+    z-index: 54;
+    transition: color 0.3s ease-in, opacity 0.3s ease-in;
+    text-decoration: none;
+}
+
+.seltzeraddict::before {
+    content: attr(data-text);
+    position: fixed;
+    z-index: 55;
+    background-image: linear-gradient(135deg, #d07ee0, #b66bc5, #8e4dac);
+    color: transparent; 
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    pointer-events: none;
+}
+
+.seltzeraddict:hover::before {
+    opacity: 0.9;
+    filter: blur(.4px);
+    transition: all 0.2s;
+  
+}
+
+.seltzeraddict:hover {
+    color: transparent;
+}
+
+
+.block {
+    position: absolute;
+    width: .4rem;
+    height: .4rem;
+    background-color: #e6e6e6; 
+    opacity: 55%;
+    transition: transform 250ms ease-out, opacity .5s ease-out;  /* extended transition time */
+
+    z-index: 550;
+}
+
+/* Trans flag colors */
+.block.blue {
+    background-color: #55CDFC;
+}
+
+.block.pink {
+    background-color: #F7A8B8;
+}
+
+.block.white {
+    background-color: #ffffff;
+}
+
+
+/* FLOCKS OF BIRDFRIENDS  */
+
+.bird {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('https://img.itch.zone/aW1hZ2UvNDQxMTk5LzIyMTkyMTguZ2lm/347x500/D5wQjR.gif') no-repeat center;
+        /* CREDIT FOR BIRD GIF TO https://ma9ici4n.itch.io/pixel-art-bird-16x16 */
+    background-size: cover;
+    transition: left 6s linear, top 5s linear;
+    opacity: 90%;
+    filter: brightness(80%);
+
+    transform: scaleX(-1); /* Flip the bird horizontally */
+    overflow: hidden;
+ 
+}
+
+.bird.foreground {
+    z-index: 200; /* value above .boxes_wrapper */
+    opacity: 0.92;
+}
+
+.bird.background {
+    transform: scaleX(-1) scale(0.7); /* Flip and reduce size */
+    z-index: 50;
+    opacity: 0.77;
+    filter: blur(0.82px);
+}
+
+/* FLOCKS OF BIRDS GONE */
+
+/* DEEE DEE DEEEEEEEE */
+
+.chickadee {
+    position: absolute;
+    width: 1.2vw;
+    height: 1.2vw;
+    background-image: url('birds/chickadee_flying.gif');
+    background-size: cover;
+    opacity: 0.9;
+    transition: transform 0.2s;
+    z-index: 130;
+    transform: rotate(0deg);
+}
+
+.chickadee.flipped {    
+    transform: scaleX(-1) rotate(0deg);
+
+}
+  
+/* / CHEESEBURGER */
+
+
+
+/* A COLD WIND BLOWS */
+
+.wind-gust {
+    position: absolute;
+    width: 150px; 
+    height: 150px; 
+    opacity: 0; /* hide initially */
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 150;
+    filter: blur(0.2px);
+}
+
+/* / OOOH CHILLY */
+
+
+
+.boxes_wrapper {
+    z-index: 100; /* make sure this is in between foreground and background birds */
+}
+
+
+.credits_footer {
+    display: block;
+    position: absolute;
+    width: fit-content;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto; 
+    opacity: 0.5;
+    transition: opacity 250ms ease-in-out;
+}
+
+
+.credits_footer p {
+    color: var(--credits_footer-p-color);
+    font-size: 0.5rem;
+    text-align:center; 
+}
+
+.credits_footer a {
+    color: var(--credits_footer-a-color);
+    font-size: 0.6rem;
+    margin-right: 10px;
+    margin-left: 0px;
+    font-weight: 600;
+}
+
+.credits_footer a:hover {
+    color: var(--credits_footer-a-hover-color);
+    opacity: 0.9;
+}
+
+
+
+
+
+/* WIGGLE ANIMATIONS */
+
+@keyframes wiggle3D {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    25% { transform: rotateX(2deg) rotateY(-2deg) rotateZ(2deg); }
+    50% { transform: rotateX(0deg) rotateY(2deg) rotateZ(-2deg); }
+    75% { transform: rotateX(-2deg) rotateY(0deg) rotateZ(2deg); }
+    100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+}
+
+
+@keyframes spinEffect {
+    0% {
+      transform: rotate(10deg); /* slight wind-up */
+    }
+    15% {
+      transform: rotate(-1800deg); /* spins quickly 5 times in the opposite direction */
+    }
+    100% {
+      transform: rotate(-1800deg); /* abrupt halt in its normal orientation */
+    }
+  }
+  
+  .top_right.spin {
+    animation: spinEffect 5s forwards; /* 2 seconds for the entire animation, but can adjust to preference */
+  }
+  
+
+  /* YA BURNT */
+
+  @keyframes burnEffect {
+    0% {
+      background-color: #B8BACF; /* Original color */
+      opacity: 50%;
+    }
+    30% {
+      background-color: #FF4500; /* Flame color */
+      opacity: 0.6;
+    }
+    70% {
+      background-color: #A9A9A9; /* Ash color */
+      opacity: 0.5;
+    }
+    90% {
+      opacity: 0.3; /* Almost faded */
+    }
+    100% {
+      opacity: 0; /* Completely faded */
+    }
+}
+
+.pixel {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    transition: transform 1s, background-color 2s;
+}
+
+
+
+
+
+
+
+
+
+/* SMALL SCREEN */
+
+@media(max-width: 900px) {
+    html, body {
+        overflow: hidden;
+    }
+
+    .boxes_wrapper {
+        display: grid;
+        width: 70vw;
+        height: 55%;
+        text-align: center;
+        position: absolute;
+        opacity: 96%;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -55%);
+    
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 1rem 1rem; 
+        grid-template-areas: 
+          "top_left top_left top_right"
+          "bottom_left bottom_right bottom_right";
+    }
+    
+    h1 {
+        font-size: calc(1rem + .2vw);
+        color: var(--primary-h1-color);
+        padding: .5rem;
+        text-align: start;
+    }
+    
+    h2 {
+        font-size: calc(0.8rem + .2vw);
+        color: var(--primary-h2-color);
+        padding: .5rem;
+    
+    }
+    
+    p {
+        font-size: calc(0.7rem + .1vw);
+        color: var(--primary-p-color);
+        padding: .5rem;
+        position: relative;
+        letter-spacing: .25px;
+    }
+    
+    a {
+        font-size: calc(0.6rem + .1vw);
+        color: var(--primary-a-color);
+        padding: .3rem;
+        letter-spacing: 0.2px;
+    }
+
+    .box {
+        border-radius: 5px;
+        padding: .5rem;
+    
+        display: flex;
+        flex-direction: column; /* stack children vertically */
+        justify-content: space-between; /* push first child to the top and the last one to the bottom */
+        height: 100%; /* make sure the container covers the full height available to it */
+
+        filter: blur(.2px);
+    }
+
+
+    .bird {
+        width: 10vw; 
+        height: 10vw;
+        overflow: hidden;
+    }
+
+    .chickadee {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-image: url('birds/chickadee_flying.gif');
+        background-size: cover;
+        opacity: 0.9;
+        transition: transform 0.2s;
+        z-index: 165;
+        transform: rotate(-13deg);
+    }
+    
+    .chickadee.flipped {
+        transform: scaleX(-1) rotate(-16deg);
+    }
+
+    .credits_footer {
+        display: none; 
+    }
+       
+}
