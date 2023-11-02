@@ -7,33 +7,28 @@ body {
     font-size: 62.5%;
     text-rendering: optimizeSpeed;
     overflow-x: hidden;
-    /* Hide horizontal scrollbar */
     margin: 0;
-
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     height: 100vh;
 }
 
-
 :root {
     --primary-background-color: #363732;
 
     --primary-h1-color: #dce1e9;
     --primary-h2-color: #dce1e9;
+
     --primary-p-color: #dce1e9;
-    --discord-p-color: #dce1e9;
+    --prose-p-color: #783F8E;
+
     --primary-a-color: #dce1e9;
     --primary-a-hover-color: #d07ee0;
-    --credits_footer-p-color: #dce1e9;
-    --credits_footer-a-color: #dce1e9;
-    --credits_footer-a-hover-color: #dce1e9;
 
     --menu_box-color: #363732;
     --blog_box-color: #999AC6;
 }
-
 
 * {
     box-sizing: border-box;
@@ -41,91 +36,121 @@ body {
     padding: 0;
 }
 
-/* Style the menu on the left */
 .menu {
     display: flex;
     position: fixed;
-    
     width: 25%;
     padding: 20px;
-    margin-top: 25vh;
+    margin-top: 20vh;
     margin-left: 15%;
     background-color: var(--menu_box-color);
-    padding: 20px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); */
 }
 
 .blog {
     width: 50%;
-    padding: 20px;
-    margin-top: 25vh;
-    margin-left: auto;  /* Push the blog to the right */
-    margin-right: 5vw;
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: 10vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--primary-background-color);
 }
 
-
-/* Style each individual blog post */
 .post {
     width: 90%;
-    height: fit-content;
     background-color: var(--blog_box-color);
-    /* Adjust the background color as needed */
     margin-bottom: 75px;
     margin-right: 30vw;
     border-radius: 4px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .post_card {
     margin: auto;
     padding: 25px;
-    columns: 200px 2;
+    align-items: center;
+    display: flex;
+
+    flex-direction: column; 
 }
 
-.photo_poem {
+.photo_haiku {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%
 
 }
+
+/* .photo_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
 
 .photo {
-    align-content: center; 
-}
+    width: fit-content;
 
-.photo_content {
-    display: flex; /* Use flexbox to arrange elements */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Align elements horizontally in the center */
 }
 
 img.kyle_photo {
-    min-width: 150px;
-    max-width: 100%;
-    display: block;
-}
-
-img.kyle_photo::after {
-    size: 11rem;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
 }
 
 figure {
     position: relative;
-    display: inline-block;  /* or 'block', depending on your needs */
     margin: 0;
 }
 
 figcaption {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
-    padding: 5px;  /* adjust as needed */
-    background-color: rgba(255, 255, 255, 0.5); /* optional: add a semi-transparent background */
-    color: #333; /* optional: change text color */
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+}
+
+.haiku {
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    
+}
+
+p.haiku_paragraph {
+    font-size: calc(0.6rem + .4vw);
+    color: var(--primary-p-color);
+    padding: 1rem;
+    position: relative;
+    line-height: 1.2;
+}
+
+.prose {
+    width: 90%;
+    text-align: center;
+}
+
+p.prose_paragraph {
+    font-size: calc(0.5rem + .3vw);
+    color: var(--prose-p-color);
+    padding: 1rem;
+    position: relative;
+    line-height: 1.1;
+}
+
+/* Rounded border */
+hr.line {
+    border-top: 1px solid #000000;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 100px;
 }
 
 h1 {
@@ -139,9 +164,7 @@ h2 {
     font-size: calc(0.8rem + .6vw);
     color: var(--primary-h2-color);
     padding: 1rem;
-
     filter: blur(0.3px);
-
 }
 
 p {
@@ -159,58 +182,35 @@ a {
 }
 
 a:hover {
-    font-size: calc(0.6rem + .4vw);
     color: var(--primary-a-hover-color);
     opacity: 95%;
-    padding: .5rem;
     transition: 250ms ease-out;
 }
 
-
-
-
-
-
-
-
-
-
-/* SMALL SCREEN */
-
 @media(max-width: 900px) {
-
-    html,
-    body {
+    html, body {
         overflow: hidden;
     }
 
     h1 {
         font-size: calc(1rem + .2vw);
-        color: var(--primary-h1-color);
         padding: .5rem;
-        text-align: start;
     }
 
     h2 {
         font-size: calc(0.8rem + .2vw);
-        color: var(--primary-h2-color);
         padding: .5rem;
-
     }
 
     p {
         font-size: calc(0.7rem + .1vw);
-        color: var(--primary-p-color);
         padding: .5rem;
-        position: relative;
         letter-spacing: .25px;
     }
 
     a {
         font-size: calc(0.6rem + .1vw);
-        color: var(--primary-a-color);
         padding: .3rem;
         letter-spacing: 0.2px;
     }
-
 }
