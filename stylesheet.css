@@ -21,9 +21,10 @@ body {
     --primary-h2-color: #dce1e9;
 
     --primary-p-color: #dce1e9;
+    --secondary-p-color: #cdd3db;
     --prose-p-color: #783F8E;
 
-    --primary-a-color: #dce1e9;
+    --primary-a-color: #e0c1e0;
     --primary-a-hover-color: #d07ee0;
 
     --menu_box-color: #363732;
@@ -84,12 +85,6 @@ body {
 
 }
 
-/* .photo_content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
 .photo {
     width: fit-content;
 
@@ -113,11 +108,12 @@ figcaption {
     padding: 5px;
     background-color: rgba(255, 255, 255, 0.5);
     color: #333;
+    font-size: calc(0.5rem + .2vw);
 }
 
 .haiku {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
     max-width: 100%;
     align-items: center;
     text-align: center;
@@ -126,13 +122,14 @@ figcaption {
 
 p.haiku_paragraph {
     font-size: calc(0.6rem + .4vw);
-    color: var(--primary-p-color);
-    padding: 1rem;
+    color: var(--prose-p-color);
+    padding: calc(0.5rem + .3vw);
+    padding-top: 1rem;
     position: relative;
     line-height: 1.2;
 }
 
-.prose {
+/* .prose {
     width: 90%;
     text-align: center;
 }
@@ -143,14 +140,54 @@ p.prose_paragraph {
     padding: 1rem;
     position: relative;
     line-height: 1.1;
-}
+} */
 
 /* Rounded border */
 hr.line {
     border-top: 1px solid #000000;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
     width: 100px;
+}
+
+.song_of_day {
+    line-height: .5;
+    align-items: end;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+span.song_header {
+    font-size: calc(0.4rem + .5vw);
+    color: var(--secondary-p-color);
+    padding: 1rem;
+    position: relative;
+    line-height: .9;
+    text-align: center;
+}
+
+p.song_paragraph {
+    font-size: calc(0.5rem + .3vw);
+    color: black;
+    padding: 1.5rem;
+    position: relative;
+    line-height: 1;
+}
+
+a.song_title {
+    font-size: calc(0.6rem + .4vw);
+    color: var(--primary-a-color);
+    line-height: 1;
+    font-style: italic;
+}
+
+span.song_artist {
+    font-size: calc(0.6rem + .4vw);
+    color: var(--primary-a-color);
+    line-height: 1;
 }
 
 h1 {
@@ -161,7 +198,7 @@ h1 {
 }
 
 h2 {
-    font-size: calc(0.8rem + .6vw);
+    font-size: calc(0.4rem + .6vw);
     color: var(--primary-h2-color);
     padding: 1rem;
     filter: blur(0.3px);
@@ -192,25 +229,194 @@ a:hover {
         overflow: hidden;
     }
 
-    h1 {
-        font-size: calc(1rem + .2vw);
-        padding: .5rem;
-    }
 
-    h2 {
-        font-size: calc(0.8rem + .2vw);
-        padding: .5rem;
-    }
+.menu {
+    display: flex;
+    position: fixed;
+    width: 25%;
+    padding: 20px;
+    margin-top: 20vh;
+    margin-left: 15%;
+    background-color: var(--menu_box-color);
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); */
+}
 
-    p {
-        font-size: calc(0.7rem + .1vw);
-        padding: .5rem;
-        letter-spacing: .25px;
-    }
+.blog {
+    width: 80%;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--primary-background-color);
+    z-index: 5;
+}
 
-    a {
-        font-size: calc(0.6rem + .1vw);
-        padding: .3rem;
-        letter-spacing: 0.2px;
-    }
+.post {
+    width: 90%;
+    background-color: var(--blog_box-color);
+    margin-bottom: 75px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.post_card {
+    margin: auto;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+
+    flex-direction: column; 
+}
+
+.photo_haiku {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%
+
+}
+
+.photo {
+    width: fit-content;
+
+}
+
+img.kyle_photo {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+}
+
+figure {
+    position: relative;
+    margin: 0;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    font-size: calc(0.4rem + .1vw);
+}
+
+.haiku {
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    
+}
+
+p.haiku_paragraph {
+    font-size: calc(0.5rem + .1vw);
+    color: var(--prose-p-color);
+    padding: .5rem;
+    padding-top: 1rem;
+    position: relative;
+    line-height: 1;
+}
+
+/* .prose {
+    width: 90%;
+    text-align: center;
+}
+
+p.prose_paragraph {
+    font-size: calc(0.5rem + .3vw);
+    color: var(--prose-p-color);
+    padding: 1rem;
+    position: relative;
+    line-height: 1.1;
+} */
+
+/* Rounded border */
+hr.line {
+    border-top: 1px solid #000000;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+
+.song_of_day {
+    line-height: .5;
+    align-items: end;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+span.song_header {
+    font-size: calc(0.4rem + .2vw);
+    color: var(--secondary-p-color);
+    padding: 1rem;
+    position: relative;
+    line-height: .9;
+    text-align: center;
+}
+
+p.song_paragraph {
+    font-size: calc(0.4rem + .1vw);
+    color: black;
+    padding: 1.5rem;
+    position: relative;
+    line-height: 1;
+}
+
+a.song_title {
+    font-size: calc(0.5rem + .1vw);
+    color: var(--primary-a-color);
+    line-height: 1;
+    font-style: italic;
+}
+
+span.song_artist {
+    font-size: calc(0.5rem + .1vw);
+    color: var(--primary-a-color);
+    line-height: 1;
+}
+
+h1 {
+    font-size: calc(1rem + .2vw);
+    color: var(--primary-h1-color);
+    padding: 1rem;
+    text-align: start;
+}
+
+h2 {
+    font-size: calc(0.4rem + .2vw);
+    color: var(--primary-h2-color);
+    padding: 1rem;
+    filter: blur(0.3px);
+}
+
+p {
+    font-size: calc(0.7rem + .2vw);
+    color: var(--primary-p-color);
+    padding: 1rem;
+    position: relative;
+}
+
+a {
+    font-size: calc(0.5rem + .1vw);
+    color: var(--primary-a-color);
+    padding: .5rem;
+    position: relative;
+}
+
+a:hover {
+    color: var(--primary-a-hover-color);
+    opacity: 95%;
+    transition: 250ms ease-out;
+}
+
 }
