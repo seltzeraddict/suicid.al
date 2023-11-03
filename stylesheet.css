@@ -40,7 +40,7 @@ body {
 .menu {
     display: flex;
     position: fixed;
-    width: 25%;
+    width: 15%;
     padding: 20px;
     margin-top: 20vh;
     margin-left: 15%;
@@ -49,10 +49,10 @@ body {
 }
 
 .blog {
-    width: 50%;
+    width: 60%;
     margin-top: 20vh;
     margin-left: auto;
-    margin-right: 10vw;
+    margin-right: 5vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -121,7 +121,7 @@ figcaption {
 }
 
 p.haiku_paragraph {
-    font-size: calc(0.6rem + .4vw);
+    font-size: calc(0.6rem + .55vw);
     color: var(--prose-p-color);
     padding: calc(0.5rem + .3vw);
     padding-top: 1rem;
