@@ -383,8 +383,9 @@ span.song_header {
     color: var(--secondary-p-color);
     padding: 1rem;
     position: relative;
-    line-height: 0.5;
+    line-height: 1;
     text-align: center;
+    white-space: nowrap;
 }
 
 p.song_paragraph {
@@ -400,12 +401,14 @@ a.song_title {
     color: var(--primary-a-color);
     line-height: 1;
     font-style: italic;
+    white-space: nowrap;
 }
 
 span.song_artist {
     font-size: calc(0.5rem + .1vw);
     color: var(--primary-a-color);
     line-height: 1;
+    white-space: nowrap;
 }
 
 h1 {
