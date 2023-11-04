@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Create an image element inside the lightbox for the clicked image
     const lightboxImage = document.createElement('img');
-    lightboxImage.style.maxWidth = '80%';
-    lightboxImage.style.maxHeight = '80%';
+    lightboxImage.style.maxWidth = '85%';
+    lightboxImage.style.maxHeight = '85%';
     lightboxImage.style.position = 'absolute';
     lightboxImage.style.top = '50%';
     lightboxImage.style.left = '50%';
