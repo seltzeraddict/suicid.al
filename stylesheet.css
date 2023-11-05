@@ -649,6 +649,7 @@ a.kyle:hover {
 .emailInput {
     background-color: var(--primary-p-color);
     padding: .1rem;
+    width: 35vw;
 }
 
 .submit_button {
@@ -661,7 +662,6 @@ a.kyle:hover {
 
 .date_footer {
     padding: .2rem;
-    font-size: 0.75rem;
 }
 
 /* WIGGLE WIGGLE */
