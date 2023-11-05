@@ -404,6 +404,7 @@ body {
     padding: 2px;
 
     justify-content: space-between;
+    
 }
 
 .menu_item {
@@ -443,7 +444,7 @@ br.menu_breaks {
     margin-left: auto;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
-    border-radius: var(--radius) + 25;
+    border-radius: 3px;
 }
 
 .post_card {
@@ -591,5 +592,130 @@ a:hover {
     opacity: 95%;
     transition: 250ms ease-out;
 }
+
+
+/* KYLE NAME RAINBOW */
+a.kyle {
+    font-size: calc(0.7rem + .4vw);
+    color: var(--primary-p-color);
+    padding: 0rem;
+
+    position: relative;
+    z-index: 54;
+    transition: color 0.3s ease-in, opacity 0.3s ease-in;
+    text-decoration: none;
+}
+
+a.kyle::before {
+    content: attr(data-text);
+    position: fixed;
+    z-index: 55;
+    background-image: linear-gradient(100deg, red, orange, yellow, green, blue, indigo, violet);
+    color: transparent; 
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    pointer-events: none;
+}
+
+a.kyle:hover::before {
+    opacity: 0.9;
+    filter: blur(1px);
+    transition: all 0.2s;
+}
+
+a.kyle:hover {
+    color: transparent;
+}
+
+/* TEXT BOX EXPLODEY */
+.explosion-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+.pixel {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #000;
+    opacity: 0;
+    transition: all 0.5s;
+    background-color: #ff44009c;
+}
+
+.emailInput {
+    background-color: var(--primary-p-color);
+    padding: .1rem;
+}
+
+.submit_button {
+    background-color:#858282;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    padding: .1rem;
+    font-family: 'Poppins', sans-serif;;
+}
+
+.date_footer {
+    padding: .2rem;
+    font-size: 0.75rem;
+}
+
+/* WIGGLE WIGGLE */
+@keyframes jello {
+from, 11.1%, to {
+    transform: translate3d(0, 0, 0);
+}
+22.2% {
+    transform: skewX(-13.5deg) skewY(-12.5deg);
+}
+33.3% {
+    transform: skewX(6.25deg) skewY(7.25deg);
+}
+44.4% {
+    transform: skewX(-4.125deg) skewY(-3.125deg);
+}
+55.5% {
+    transform: skewX(1.5625deg) skewY(2.5625deg);
+}
+66.6% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+}
+77.7% {
+    transform: skewX(1.390625deg) skewY(0.390625deg);
+}
+88.8% {
+    transform: skewX(-0.1953125deg) skewY(-1.1953125deg);
+}
+}
+
+.menu_item span {
+display: inline-block;
+transition: transform 0.5s;
+}
+
+.menu_item span:hover {
+animation: jello 0.6s ease-in-out;
+}
+
+button.menu_item {
+    float: right;
+    top: 0;
+    line-height: .5;
+    background-color: var(--primary-background-color);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: calc(0.6rem + .4vw);
+    font-family: Poppins;
+    color: var(--primary-a-color);
+    padding: .5rem;
+    position: relative;
+}
+/* WIGGLE WIGGLE */
 
 }
