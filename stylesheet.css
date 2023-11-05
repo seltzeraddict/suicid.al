@@ -222,6 +222,7 @@ img.kyle_photo {
     max-height: 700px;
     display: block;
     line-height: 0;
+    border-radius: var(--border-radius);
 }
 
 figure {
@@ -237,6 +238,8 @@ figcaption {
     bottom: 10px;
     left: 0;
     padding: 0.4rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
     background-color: rgba(255, 255, 255, 0.5);
     color: #333;
     font-size: calc(0.5rem + .2vw);
@@ -444,7 +447,7 @@ br.menu_breaks {
     margin-left: auto;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
-    border-radius: 3px;
+    border-radius: 7px;
 }
 
 .post_card {
@@ -465,6 +468,7 @@ br.menu_breaks {
 
 .photo {
     width: fit-content;
+
 }
 
 img.kyle_photo {
@@ -472,6 +476,7 @@ img.kyle_photo {
     max-width: 350px;
     max-height: 300px;
     height: auto;
+    border-radius: 7px;
 }
 
 figure {
@@ -483,16 +488,18 @@ figcaption {
     position: absolute;
     bottom: 5px;
     left: 0;
-    padding: 0.2rem;
+    padding: 0.05rem;
+    padding-right: .3rem;
+    padding-left: .3rem;
     background-color: rgba(255, 255, 255, 0.5);
     color: #333;
     font-size: calc(0.3rem + .5vw);
 }
 
 .haiku {
-    margin-left: 5%;
-    margin-right: 5%;
-    max-width: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 110%;
     align-items: center;
     text-align: center;
     

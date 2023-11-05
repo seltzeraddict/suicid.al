@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     lightbox.style.position = 'fixed';
     lightbox.style.top = '0';
     lightbox.style.left = '0';
-    lightbox.style.width = '100%';
-    lightbox.style.height = '100%';
+    lightbox.style.width = '100vw';
+    lightbox.style.height = '100vh';
     lightbox.style.background = 'rgba(0, 0, 0, 0.8)';
     lightbox.style.zIndex = '1000';
     lightbox.style.opacity = '0';
