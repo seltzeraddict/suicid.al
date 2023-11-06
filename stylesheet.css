@@ -74,6 +74,30 @@ a.kyle:hover {
     color: transparent;
 }
 
+.seltzeraddict::before {
+    content: attr(data-text);
+    position: fixed;
+    transform: translateY(5%);
+    z-index: 55;
+    background-image: linear-gradient(135deg, #d07ee0, #b66bc5, #8e4dac);
+    color: transparent; 
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    pointer-events: none;
+}
+
+.seltzeraddict:hover::before {
+    opacity: 0.9;
+    filter: blur(.4px);
+    transition: all 0.2s;
+}
+
+.seltzeraddict:hover {
+    color: transparent;
+}
+
 /* TEXT BOX EXPLODEY */
 .explosion-container {
     position: relative;
@@ -447,7 +471,7 @@ br.menu_breaks {
     margin-left: auto;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
-    border-radius: 7px;
+    border-radius: 5px;
 }
 
 .post_card {
@@ -476,7 +500,7 @@ img.kyle_photo {
     max-width: 350px;
     max-height: 300px;
     height: auto;
-    border-radius: 7px;
+    border-radius: 5px;
 }
 
 figure {
