@@ -218,6 +218,15 @@ button.menu_item {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* .post::after {
+    content: '';
+    background: url('/media/vines2.png') 0 0 no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 100px;
+} */
+
 .post_card {
     margin: auto;
     padding: 25px;
