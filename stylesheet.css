@@ -1,7 +1,7 @@
 body {
     background: var(--primary-background-color);
     color: #000000;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela+Round', sans-serif;
     letter-spacing: 0.5px;
     line-height: 1.8;
     font-size: 62.5%;
@@ -31,6 +31,9 @@ body {
     --blog_box-color: #999AC6;
 
     --border-radius: 5px;
+
+    /* --menu-font-family: 'Varela+Round', sans-serif; */
+
 }
 
 * {
@@ -196,6 +199,8 @@ button.menu_item {
     margin-left: 15%;
     background-color: var(--menu_box-color);
     /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); */
+    
+    font-family: var(--menu-font-family);
 }
 
 .blog {
