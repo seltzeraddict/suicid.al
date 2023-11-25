@@ -587,6 +587,7 @@ p.song_paragraph {
     padding: .75rem;
     position: relative;
     line-height: 1;
+    max-width: 80%;
 }
 
 a.song_title {
