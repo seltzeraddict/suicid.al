@@ -831,7 +831,7 @@ button.menu_item {
     }
     
     .blog {
-        width: 90%;
+        width: 95%;
         margin-top: 10vh;
         margin-left: auto;
         margin-right: auto;
@@ -849,16 +849,14 @@ button.menu_item {
         margin-right: auto;
         margin-left: auto;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    
         border-radius: 5px;
     }
     
     .post_card {
         margin: auto;
-        padding: 20px;
+        padding: 0.5rem;
         align-items: center;
         display: flex;
-    
         flex-direction: column; 
     }
     
