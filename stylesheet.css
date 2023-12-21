@@ -404,6 +404,27 @@ a:hover {
     transition: 250ms ease-out;
 }
 
+/* DEEE DEE DEEEEEEEE */
+
+.chickadee {
+    position: fixed;
+    width: 1.3vw;
+    height: 1.3vw;
+    background-image: url('media/chickadee_flying.gif');
+    background-size: cover;
+    opacity: 0.9;
+    transition: transform 0.2s;
+    z-index: 130;
+    transform: rotate(0deg);
+}
+
+.chickadee.flipped {    
+    transform: scaleX(-1) rotate(0deg);
+
+}
+
+/* / CHEESEBURGER */
+
 
 
 
