@@ -261,6 +261,7 @@ img.kyle_photo {
     display: block;
     line-height: 0;
     border-radius: var(--border-radius);
+    filter: drop-shadow(rgba(0, 0, 0, 0.336) 1px 3px 5px);
 }
 
 figure {
@@ -404,28 +405,6 @@ a:hover {
     transition: 250ms ease-out;
 }
 
-/* DEEE DEE DEEEEEEEE */
-
-.chickadee {
-    position: fixed;
-    width: 1.3vw;
-    height: 1.3vw;
-    background-image: url('media/chickadee_flying.gif');
-    background-size: cover;
-    opacity: 0.9;
-    transition: transform 0.2s;
-    z-index: 130;
-    transform: rotate(0deg);
-}
-
-.chickadee.flipped {    
-    transform: scaleX(-1) rotate(0deg);
-
-}
-
-/* / CHEESEBURGER */
-
-
 
 
 
@@ -552,7 +531,7 @@ figcaption {
     padding-left: .3rem;
     background-color: rgba(255, 255, 255, 0.5);
     color: #333;
-    font-size: calc(0.3rem + .5vw);
+    font-size: calc(0.3rem + .6vw);
 }
 
 .haiku {
@@ -788,7 +767,7 @@ button.menu_item {
     position: relative;
 }
 /* WIGGLE WIGGLE */
-
+}
 
 
 
@@ -928,7 +907,7 @@ button.menu_item {
     }
     
     p.haiku_paragraph {
-        font-size: calc(0.5rem + .5vw);
+        font-size: calc(0.7rem + .5vw);
         color: var(--prose-p-color);
         padding: .5rem;
         padding-top: 1rem;
@@ -956,7 +935,7 @@ button.menu_item {
     }
     
     span.song_header {
-        font-size: calc(0.4rem + .2vw);
+        font-size: calc(0.5rem + .2vw);
         color: var(--secondary-p-color);
         padding: 1rem;
         position: relative;
@@ -966,7 +945,7 @@ button.menu_item {
     }
     
     p.song_paragraph {
-        font-size: calc(0.4rem + .1vw);
+        font-size: calc(0.5rem + .2vw);
         color: black;
         padding: .75rem;
         position: relative;
@@ -975,7 +954,7 @@ button.menu_item {
     }
     
     a.song_title {
-        font-size: calc(0.5rem + .1vw);
+        font-size: calc(0.5rem + .2vw);
         color: var(--primary-a-color);
         line-height: 1;
         font-style: italic;
@@ -983,7 +962,7 @@ button.menu_item {
     }
     
     span.song_artist {
-        font-size: calc(0.5rem + .1vw);
+        font-size: calc(0.5rem + .2vw);
         color: var(--primary-a-color);
         line-height: 1;
         white-space: nowrap;
@@ -1058,6 +1037,4 @@ button.menu_item {
     a.kyle:hover {
         color: transparent;
     }
-}
-
 }
