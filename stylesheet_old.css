@@ -16,14 +16,13 @@ body {
 
 :root {
     --primary-background-color: #363732;
-    --secondary-background-color: #41423d;
 
     --primary-h1-color: #dce1e9;
     --primary-h2-color: #dce1e9;
 
     --primary-p-color: #dce1e9;
     --secondary-p-color: #cdd3db;
-    --prose-p-color: #ae5bcf;
+    --prose-p-color: #783F8E;
 
     --primary-a-color: #e0c1e0;
     --primary-a-hover-color: #d07ee0;
@@ -217,20 +216,28 @@ button.menu_item {
 
 .post {
     width: 90%;
-    background-color: var(--secondary-background-color);
+    background-color: var(--blog_box-color);
     margin-bottom: 75px;
     margin-right: 0;
     border-radius: var(--border-radius);
-
-    box-shadow: 0 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.466);
-    border-top: 7px solid rgba(0, 0, 0, 0.404);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+/* .post::after {
+    content: '';
+    background: url('/media/vines2.png') 0 0 no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 100px;
+} */
 
 .post_card {
     margin: auto;
     padding: 25px;
     align-items: center;
     display: flex;
+
     flex-direction: column; 
 }
 
@@ -287,7 +294,7 @@ figcaption {
 }
 
 p.haiku_paragraph {
-    font-size: calc(0.8rem + .55vw);
+    font-size: calc(0.6rem + .55vw);
     color: var(--prose-p-color);
     padding: calc(0.5rem + .3vw);
     padding-top: 1rem;
@@ -295,7 +302,18 @@ p.haiku_paragraph {
     line-height: 1.2;
 }
 
+/* .prose {
+    width: 90%;
+    text-align: center;
+}
 
+p.prose_paragraph {
+    font-size: calc(0.5rem + .3vw);
+    color: var(--prose-p-color);
+    padding: 1rem;
+    position: relative;
+    line-height: 1.1;
+} */
 
 /* Rounded border */
 hr.line {
@@ -460,14 +478,14 @@ br.menu_breaks {
 }
 
 .post {
-    width: 90%;
-    background-color: var(--secondary-background-color);
+    width: 80%;
+    background-color: var(--blog_box-color);
     margin-bottom: 75px;
-    margin-right: 0;
-    border-radius: var(--border-radius);
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
-    box-shadow: 0 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.466);
-    border-top: 7px solid rgba(0, 0, 0, 0.404);
+    border-radius: 5px;
 }
 
 .post_card {
@@ -826,17 +844,14 @@ button.menu_item {
     
     .post {
         width: 100%;
-        background-color: var(--secondary-background-color);
+        background-color: var(--blog_box-color);
         margin-bottom: 65px;
         margin-right: auto;
         margin-left: auto;
-        box-shadow: 0 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.466);
-        border-top: 5px solid rgba(0, 0, 0, 0.404);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
     }
     
-
-
     .post_card {
         margin: auto;
         padding: 0.5rem;

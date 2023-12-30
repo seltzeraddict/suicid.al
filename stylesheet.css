@@ -15,19 +15,22 @@ body {
 }
 
 :root {
-    --primary-background-color: #363732;
+    --primary-background-color: #282B2C;
+    --secondary-background-color: #303436;
+
+    --border-top-color: #4F4D48;
 
     --primary-h1-color: #dce1e9;
     --primary-h2-color: #dce1e9;
 
     --primary-p-color: #dce1e9;
     --secondary-p-color: #cdd3db;
-    --prose-p-color: #783F8E;
+    --prose-p-color: #ae5bcf;
 
     --primary-a-color: #e0c1e0;
     --primary-a-hover-color: #d07ee0;
 
-    --menu_box-color: #363732;
+    --menu_box-color: #282B2C;
     --blog_box-color: #999AC6;
 
     --border-radius: 5px;
@@ -182,7 +185,7 @@ button.menu_item {
     text-align: center;
     text-decoration: none;
 
-    font-size: calc(0.6rem + .4vw);
+    font-size: calc(0.7rem + .4vw);
     font-family: Poppins;
     color: var(--primary-a-color);
     padding: .5rem;
@@ -197,15 +200,14 @@ button.menu_item {
     padding: 20px;
     margin-top: 20vh;
     margin-left: 15%;
-    background-color: var(--menu_box-color);
-    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); */
+    /* background-color: var(--menu_box-color); */
     
     font-family: var(--menu-font-family);
 }
 
 .blog {
     width: 60%;
-    margin-top: 10vh;
+    margin-top: 8vh;
     margin-left: auto;
     margin-right: 6vw;
     display: flex;
@@ -216,28 +218,20 @@ button.menu_item {
 
 .post {
     width: 90%;
-    background-color: var(--blog_box-color);
+    background-color: var(--secondary-background-color);
     margin-bottom: 75px;
     margin-right: 0;
     border-radius: var(--border-radius);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
 
-/* .post::after {
-    content: '';
-    background: url('/media/vines2.png') 0 0 no-repeat;
-    display: inline-block;
-    vertical-align: middle;
-    width: 50px;
-    height: 100px;
-} */
+    box-shadow: 0 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.466);
+    border-top: 7px solid var(--border-top-color);
+}
 
 .post_card {
     margin: auto;
     padding: 25px;
     align-items: center;
     display: flex;
-
     flex-direction: column; 
 }
 
@@ -294,7 +288,7 @@ figcaption {
 }
 
 p.haiku_paragraph {
-    font-size: calc(0.6rem + .55vw);
+    font-size: calc(0.8rem + .55vw);
     color: var(--prose-p-color);
     padding: calc(0.5rem + .3vw);
     padding-top: 1rem;
@@ -302,18 +296,7 @@ p.haiku_paragraph {
     line-height: 1.2;
 }
 
-/* .prose {
-    width: 90%;
-    text-align: center;
-}
 
-p.prose_paragraph {
-    font-size: calc(0.5rem + .3vw);
-    color: var(--prose-p-color);
-    padding: 1rem;
-    position: relative;
-    line-height: 1.1;
-} */
 
 /* Rounded border */
 hr.line {
@@ -478,14 +461,14 @@ br.menu_breaks {
 }
 
 .post {
-    width: 80%;
-    background-color: var(--blog_box-color);
+    width: 90%;
+    background-color: var(--secondary-background-color);
     margin-bottom: 75px;
-    margin-right: auto;
-    margin-left: auto;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 0;
+    border-radius: var(--border-radius);
 
-    border-radius: 5px;
+    box-shadow: 0 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.466);
+    border-top: 7px solid var(--border-top-color);
 }
 
 .post_card {
@@ -844,14 +827,17 @@ button.menu_item {
     
     .post {
         width: 100%;
-        background-color: var(--blog_box-color);
+        background-color: var(--secondary-background-color);
         margin-bottom: 65px;
         margin-right: auto;
         margin-left: auto;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.466);
+        border-top: 5px solid var(--border-top-color);
         border-radius: 5px;
     }
     
+
+
     .post_card {
         margin: auto;
         padding: 0.5rem;
