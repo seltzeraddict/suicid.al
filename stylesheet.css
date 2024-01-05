@@ -1,6 +1,6 @@
 body {
     background: var(--primary-background-color);
-    color: #000000;
+    color: var(--primary-p-color);
     font-family: 'Varela+Round', sans-serif;
     letter-spacing: 0.5px;
     line-height: 1.8;
@@ -15,6 +15,8 @@ body {
 }
 
 :root {
+    /* https://coolors.co/282b2c-4f4d48-303436-ab92bf-afc1d6 */
+    
     --primary-background-color: #282B2C;
     --secondary-background-color: #303436;
 
@@ -25,9 +27,10 @@ body {
 
     --primary-p-color: #dce1e9;
     --secondary-p-color: #cdd3db;
-    --prose-p-color: #ae5bcf;
+    
+    --prose-p-color: #AFC1D6;
 
-    --primary-a-color: #e0c1e0;
+    --primary-a-color: #AB92BF;
     --primary-a-hover-color: #d07ee0;
 
     --menu_box-color: #282B2C;
@@ -200,8 +203,6 @@ button.menu_item {
     padding: 20px;
     margin-top: 20vh;
     margin-left: 15%;
-    /* background-color: var(--menu_box-color); */
-    
     font-family: var(--menu-font-family);
 }
 
@@ -327,7 +328,7 @@ span.song_header {
 
 p.song_paragraph {
     font-size: calc(0.5rem + .3vw);
-    color: black;
+    color: var(--primary-h1-color);
     padding: 1.5rem;
     position: relative;
     line-height: 1;
