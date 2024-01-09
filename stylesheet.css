@@ -199,10 +199,10 @@ button.menu_item {
 .menu {
     display: flex;
     position: fixed;
-    width: 15%;
+    width: 15vw;
     padding: 20px;
     margin-top: 20vh;
-    margin-left: 15%;
+    margin-left: 15vw;
     font-family: var(--menu-font-family);
 }
 
@@ -210,7 +210,7 @@ button.menu_item {
     width: 60%;
     margin-top: 8vh;
     margin-left: auto;
-    margin-right: 6vw;
+    margin-right: 5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -289,7 +289,7 @@ figcaption {
 }
 
 p.haiku_paragraph {
-    font-size: calc(0.8rem + .55vw);
+    font-size: calc(0.7rem + .55vw);
     color: var(--prose-p-color);
     padding: calc(0.5rem + .3vw);
     padding-top: 1rem;
@@ -392,12 +392,98 @@ a:hover {
 
 
 
+
+@media(max-width: 1350px) {
+    .menu {
+        display: flex;
+        background-color: #161719;
+        filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.363));
+        position: fixed;
+        opacity: 95%;
+        width: 100%;
+        height: 5rem;
+        border-radius: 1px 1px 10px 10px;
+        z-index: 500;
+        transition: transform 200ms ease-out;
+        text-wrap: balance;
+        background-color: var(--menu_box-color);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -.8rem;
+        padding: 2px;
+    
+        justify-content: space-between;
+        
+    }
+
+    .menu_item {
+        float: right;
+        line-height: 1;
+        opacity: 95%;
+        border-radius: 1px 1px 10px 10px;
+        z-index: 999;
+        transition: transform 200ms ease-out;
+        text-wrap: balance;
+        padding: .25rem;
+        margin-left: 2rem;
+        overflow: hidden;
+    }
+    
+    br.menu_breaks {
+        display: none;
+    }
+
+    .blog {
+        width: 90%;
+        margin-top: 15vh;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: var(--primary-background-color);
+        z-index: 5; */
+    }
+    
+    .post {
+        width: 90%;
+        background-color: var(--secondary-background-color);
+        margin-bottom: 75px;
+        margin-right: 0;
+        border-radius: var(--border-radius);
+    
+        box-shadow: 0 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.466);
+        border-top: 7px solid var(--border-top-color);
+    }
+
+    .seltzeraddict::before {
+        content: attr(data-text);
+        position: fixed;
+        transform: translateY(5%) translateX(-20%);
+        z-index: 55;
+        background-image: linear-gradient(135deg, #d07ee0, #b66bc5, #a258c5);
+        color: transparent; 
+        -webkit-background-clip: text;
+        background-clip: text;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+        pointer-events: none;
+    }
+
+    .seltzeraddict:hover::before {
+        opacity: 1;
+        filter: blur(.3px);
+        transition: all 0.2s;
+    }
+
+
+}
+
+
 @media(max-width: 900px) {
 
 body {
     background: var(--primary-background-color);
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
     letter-spacing: 0.5px;
     line-height: 1.8;
     font-size: 62.5%;
@@ -443,6 +529,8 @@ body {
     text-wrap: balance;
     padding: .25rem;
     overflow: hidden;
+
+    margin-left: .25rem;
 }
 
 br.menu_breaks {
@@ -567,7 +655,7 @@ span.song_header {
 
 p.song_paragraph {
     font-size: calc(0.4rem + .1vw);
-    color: black;
+    color: var(--primary-h1-color);
     padding: .75rem;
     position: relative;
     line-height: 1;
@@ -821,7 +909,7 @@ button.menu_item {
         margin-right: auto;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         background-color: var(--primary-background-color);
         z-index: 5;
     }
@@ -933,7 +1021,7 @@ button.menu_item {
     
     p.song_paragraph {
         font-size: calc(0.5rem + .2vw);
-        color: black;
+        color: var(--primary-h1-color);
         padding: .75rem;
         position: relative;
         line-height: 1;
